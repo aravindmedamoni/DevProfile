@@ -10,13 +10,13 @@
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:contentDescription="@string/content_description"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/devslopesbanner"
-        android:contentDescription="@string/content_description"/>
+        app:srcCompat="@drawable/devslopesbanner" />
 
     <ImageView
         android:id="@+id/profile"
@@ -24,10 +24,10 @@
         android:layout_height="100dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="120dp"
+        android:contentDescription="@string/content_description"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/devslopesprofilelogo"
-        android:contentDescription="@string/content_description"/>
+        app:srcCompat="@drawable/devslopesprofilelogo" />
 
     <TextView
         android:id="@+id/bannerName"
@@ -46,13 +46,13 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="72dp"
+        android:contentDescription="@string/content_description"
         app:layout_constraintEnd_toStartOf="@+id/starView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile"
-        app:srcCompat="@drawable/camerabutton"
-        android:contentDescription="@string/content_description"/>
+        app:srcCompat="@drawable/camerabutton" />
 
     <ImageView
         android:id="@+id/starView"
@@ -60,25 +60,93 @@
         android:layout_height="60dp"
         android:layout_marginStart="28dp"
         android:layout_marginEnd="28dp"
+        android:contentDescription="@string/content_description"
         app:layout_constraintBottom_toBottomOf="@+id/cameraView"
         app:layout_constraintEnd_toStartOf="@+id/driveView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cameraView"
         app:layout_constraintTop_toTopOf="@+id/cameraView"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/favoritebutton"
-        android:contentDescription="@string/content_description"/>
+        app:srcCompat="@drawable/favoritebutton" />
 
     <ImageView
         android:id="@+id/driveView"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:contentDescription="@string/content_description"
         app:layout_constraintBottom_toBottomOf="@+id/starView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/starView"
         app:layout_constraintTop_toTopOf="@+id/starView"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/inboxbutton"
+        app:srcCompat="@drawable/inboxbutton" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/dataView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/cameraView"
+        app:srcCompat="@drawable/dataimage"
+        android:contentDescription="@string/content_description"/>
+
+    <ImageView
+        android:id="@+id/galleryView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/dataView"
+        app:srcCompat="@drawable/imagesimage"
+        android:contentDescription="@string/content_description"/>
+
+    <ImageView
+        android:id="@+id/videoView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/dataView"
+        app:layout_constraintTop_toBottomOf="@+id/dataView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/videosimage"
+        android:contentDescription="@string/content_description"/>
+
+    <ImageView
+        android:id="@+id/codeView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/galleryView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/galleryView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/codeimage"
         android:contentDescription="@string/content_description"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
